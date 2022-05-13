@@ -1,0 +1,27 @@
+services:
+  web1:
+    image: reimb-api-new
+    container_name: reimb-api-container
+    restart: always
+    environment:
+      - MY_PORT=7000
+      - DB_URL=jdbc:mysql://dbmysql:3306/Reimbursements
+      - DB_USERNAME=root
+      - DB_PASSWORD=password123
+    ports:
+      - 7000:7000
+    depends_on:
+      - dbmysql
+  web2:
+    image: email-api
+    container_name: email-api-container
+    restart: always
+    ports:
+      - 8080:8080
+  dbmysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password123
+      - MYSQL_DATABASE=Reimbursements
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password123
