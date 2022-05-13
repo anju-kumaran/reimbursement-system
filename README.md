@@ -21,7 +21,7 @@ The Expense Reimbursement System will manage the process of reimbursing employee
 
 
 ## Features
-####API 1
+#### API 1
 Request reimbursement API
 
 -Employee can:
@@ -33,7 +33,7 @@ Request reimbursement API
 - Approve/Deny/Reassign reimbursements
 - An email will be sent to the employee whenever there is an update
 
-####API 2
+#### API 2
 Email API
 - Receives request from API-1 to send emails to specified employees.
 
@@ -51,5 +51,5 @@ Email API
 9. API-2 uses server port 8080.
 
 
-##Usage
+## Usage
 All the employees in the company can login and submit requests for reimbursement and view their past tickets and pending requests. Finance managers can log in and view all reimbursement requests and history for all employees in the company. Finance managers are authorized to approve and deny requests for expense reimbursement.
